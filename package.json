@@ -1,0 +1,17 @@
+{
+  "name": "@no-reactive-reproduce/root",
+  "packageManager": "pnpm@9.4.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "pnpm run -C packages/three-part-package build",
+    "dev": "pnpm run -C packages/three-part-package dev & chokidar 'packages/three-part-package/dist/**/*' -c 'pnpm run -C packages/playground build'"
+  },
+  "devDependencies": {
+    "chokidar-cli": "^3.0.0",
+    "tsup": "^8.2.3",
+    "typescript": "^5.5.4"
+  }
+}
