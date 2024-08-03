@@ -18,7 +18,7 @@
     "build": "tsup src/index.ts --format esm,cjs --dts --clean",
     "dev": "tsup src/index.ts --format esm,cjs --dts --watch"
   },
-  "dependencies": {
+  "peerDependencies": {
     "@vue-mini/core": "^1.0.2"
   }
 }
